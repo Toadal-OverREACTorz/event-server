@@ -139,12 +139,20 @@ router.delete('/events/:id', requireToken, (req, res, next) => {
 // UPDATE
 // PATCH /events/:id
 router.patch('/events/:id', requireToken, (req, res, next) => {
-  const userId = req.params.userId
-  const rsvpData = req.body.rsvpStatus // must use this in curl script
-  const eventId = rsvpData.eventId
+  console.log(req)
+  const userId = req.user._id
+  console.log(userId)
+  const rsvpData = req.body.rsvps // coming from client/has to match up with model / must use this in curl script
+  console.log(rsvpData)
+  const eventId = req.params.id
+  console.log(eventId)
 
   Event.findById(eventId)
     .then(handle404)
+    .then((event) => {
+      console.log('rsvp')
+      return (event)
+    })
     .then(event => {
       const rsvp = event.rsvp.id(userId)
       rsvp.set(rsvpData)

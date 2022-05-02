@@ -23,7 +23,7 @@ const eventSchema = new mongoose.Schema({
     required: true
   },
   // subdoc for rsvp schema
-  rsvp: [rsvpSchema],
+  rsvps: [rsvpSchema],
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
