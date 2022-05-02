@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const rsvpSchema = require('./RSVP')
 
 const eventSchema = new mongoose.Schema({
     title: {
