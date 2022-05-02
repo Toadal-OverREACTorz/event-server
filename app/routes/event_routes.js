@@ -5,7 +5,7 @@ const passport = require('passport')
 
 // pull in Mongoose model for event
 const Event = require('../models/events')
-const RSVP = require('../models/RSVP')
+// const RSVP = require('../models/RSVP')
 
 // this is a collection of methods that help us detect situations when we need
 // to throw a custom error
