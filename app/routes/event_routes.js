@@ -5,6 +5,7 @@ const passport = require('passport')
 
 // pull in Mongoose model for event
 const Event = require('../models/events')
+const RSVP = require('../models/RSVP')
 
 // this is a collection of methods that help us detect situations when we need
 // to throw a custom error
@@ -114,26 +115,44 @@ router.delete('/events/:id', requireToken, (req, res, next) => {
 
 // UPDATE RSVP
 // PATCH /events/5a7db6c74d55bc51bdf39793(ID)
-// router.patch('/events/:eventId', requireToken, removeBlanks, (req, res, next) => {
+// router.patch('/events/:id', requireToken, removeBlanks, (req, res, next) => {
 //   // if the client attempts to change the `owner` property by including a new
 //   // owner, prevent that by deleting that key/value pair
 //   delete req.body.event.owner
 
-//   Example.findById(req.params.id)
+//   Event.findById(req.params.id)
 //     .then(handle404)
-//     .then(example => {
+//     .then(event => {
 //       // pass the `req` object and the Mongoose record to `requireOwnership`
 //       // it will throw an error if the current user isn't the owner
 //       requireOwnership(req, example)
 
 //       // pass the result of Mongoose's `.update` to the next `.then`
-//       return example.updateOne(req.body.example)
+//       // return example.updateOne(req.body.example)
 //     })
 //     // if that succeeded, return 204 and no JSON
 //     .then(() => res.sendStatus(204))
 //     // if an error occurs, pass it to the handler
 //     .catch(next)
 // })
+
+// UPDATE
+// PATCH /events/:id
+router.patch('/events/:id', requireToken, (req, res, next) => {
+  const userId = req.params.userId
+  const rsvpData = req.body.rsvpStatus // must use this in curl script
+  const eventId = rsvpData.eventId
+
+  Event.findById(eventId)
+    .then(handle404)
+    .then(event => {
+      const rsvp = event.rsvp.id(userId)
+      rsvp.set(rsvpData)
+      return event.save()
+    })
+    .then(() => res.sendStatus(204))
+    .catch(next)
+})
 
 // will need request for RSVP, and will need to be required in from /models/RSVP
 

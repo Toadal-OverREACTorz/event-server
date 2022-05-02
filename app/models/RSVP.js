@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const rsvpSchema = new mongoose.Schema({
-    owner: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
