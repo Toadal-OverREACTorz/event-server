@@ -28,12 +28,12 @@ const requireToken = passport.authenticate('bearer', { session: false })
 const router = express.Router()
 
 // CREATE
-// POST /examples
+// POST /event
 router.post('/events', requireToken, (req, res, next) => {
   // set owner of new example to be current user
-  req.body.example.owner = req.user.id
+  req.body.event.owner = req.user.id
 
-  Event.create(req.body.example)
+  Event.create(req.body.event)
     // respond to succesful `create` with status 201 and JSON of new "event"
     .then(event => {
       res.status(201).json({ event: event.toObject() })
