@@ -63,7 +63,7 @@ router.get('/events', (req, res, next) => {
 
 // SHOW
 // GET /events/5a7db6c74d55bc51bdf39793(ID)
-router.get('/events/:id', (req, res, next) => {
+router.get('/events/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Event.findById(req.params.id)
     .then(handle404)
