@@ -34,6 +34,7 @@ In the planning of this application, an ERD was needed to help visualize the pro
 - As a user, I want to see all the events.
 - As a user, I want to see the events I’ve created.
 - As a user, I want to edit my events.
+- As a user, I want to delete my events.
 - As a user, I want to like/heart other events.
 - As a user, I want to RSVP to events.
 - As a user, I want to see the number of people ‘Going’ to the event.
