@@ -78,4 +78,4 @@ Our team name is Toadal-OverREACTorz and consists of:
 - Kyle Hough
 - Ranila Iyanga Sorizo
 
-**[⬆ back to top](#quick-links)**
+**[⬆ back to top](https://github.com/Toadal-OverREACTorz/event-server/tree/dev)**
