@@ -70,3 +70,12 @@ Frontend:
 Planning: 
 - Trello
 - Agile Scrum
+
+This app was done as the 3rd Project for GA SEI program.
+Our team name is Toadal-OverREACTorz and consists of:
+- Alina Voey
+- Jeff Rowland
+- Kyle Hough
+- Ranila Iyanga Sorizo
+
+**[⬆ back to top](#quick-links)**
