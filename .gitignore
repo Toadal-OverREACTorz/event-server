@@ -201,8 +201,6 @@ bower.json # same
 # Ignore Byebug command history file.
 .byebug_history
 
-# End of https://www.gitignore.io/api/rails
-
-package-lock.json
+# End of https://www.gitignore.io/api/rail
 
 toDo.text
