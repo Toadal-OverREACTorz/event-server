@@ -117,7 +117,6 @@ router.delete('/events/:id', requireToken, (req, res, next) => {
 // PATCH /rsvp/:id
 // must use different url path (rsvp instead of events) since we're already using patch for events above
 router.patch('/rsvp/:id', requireToken, (req, res, next) => {
-
   const rsvpData = req.body.rsvps // coming from client/has to match up with model / must use this in curl script
   const eventId = req.params.id
 
