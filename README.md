@@ -61,6 +61,7 @@ Backend:
 
 Frontend:
 - React
+- Axios
 - HTML/CSS
 - Bootstrap
 - JavaScript
