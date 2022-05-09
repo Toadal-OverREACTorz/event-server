@@ -19,13 +19,36 @@ To view the frontend repo, [click here](https://github.com/Toadal-OverREACTorz/e
 1. Open in your code editor to make contributions. Then push those to your clone with `git push origin response` and submit a pull request.
 1. To run the application and play locally, use `npm run server`.
 
-## Planning
+## API URL
 
-#### ERD
+```js
+  production: 'https://rocky-caverns-23708.herokuapp.com',
+```
+
+## API End Points
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| DELETE | `/sign-out`            | `users#signout`   |
+| PATCH  | `/change-password`     | `users#changepw`  |
+| GET    | `/events`               | `events#index`     |
+| POST   | `/events`               | `events#create`    |
+| GET    | `/events/:id`           | `events#show`      |
+| PATCH  | `/events/:id`           | `events#update`    |
+| DELETE  | `/events/:id`           | `events#delete`    |
+| PATCH  | `/rsvp/:id`           | `rsvp#update`    |
+
+All data returned from API actions is formatted as JSON.
+
+# Planning
+
+## ERD
 
 In the planning of this application, an ERD was needed to help visualize the project. ![ERD](https://media.git.generalassemb.ly/user/41453/files/6e3fd600-ca04-11ec-874e-d36dad0aee4f)
 
-#### User Stories
+## User Stories
 
 - As a user, I want to sign up, sign in.
 - As a user, I want to change password.
@@ -35,13 +58,14 @@ In the planning of this application, an ERD was needed to help visualize the pro
 - As a user, I want to see the events I’ve created.
 - As a user, I want to edit my events.
 - As a user, I want to delete my events.
-- As a user, I want to like/heart other events.
 - As a user, I want to RSVP to events.
 - As a user, I want to see the number of people ‘Going’ to the event.
+- - As a user, I want to see who RSVP’d to the events.
 
-##### Stretch Goals
+### Stretch Goals
 
 - As a user, I want to see who RSVP’d to the events.
+- As a user, I want to like/heart other events.
 - As a user, I want to share an event.
 - Allow users to send out messages to all RSVP'd users.
 - Allow users to invite other users to events
@@ -52,7 +76,20 @@ In the planning of this application, an ERD was needed to help visualize the pro
 - Allow users to add comments to events
 - Allow users to send a message to the event host (owner)
 
-#### Technologies Used
+## Unsolved Problems for Future Iterations
+* Date will be based off user timezone instead of UTC
+* Allow users to cancel their RSVP status
+* Allow users to share an event
+* Allow users to send out messages to all RSVP'd users
+* Allow users to invite other users to events
+* Allow users to upload an image when creating an event
+* Allow users to search for events based on location/ dates
+* Allow users to see who has rsvp'd to an event
+* Allow users to create a public or private event
+* Allow users to add comments to events
+* Allow users to send a message to the event host (owner)
+
+### Technologies Used
 
 Backend:
 - Express.js
@@ -77,5 +114,3 @@ Our team name is Toadal-OverREACTorz and consists of:
 - Jeff Rowland
 - Kyle Hough
 - Ranila Iyanga Sorizo
-
-**[⬆ back to top](https://github.com/Toadal-OverREACTorz/event-server/tree/dev)**
