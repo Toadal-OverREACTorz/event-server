@@ -49,7 +49,6 @@ All data returned from API actions is formatted as JSON.
 In the planning of this application, an ERD was needed to help visualize the project. ![ERD](https://media.git.generalassemb.ly/user/41453/files/6e3fd600-ca04-11ec-874e-d36dad0aee4f)
 
 ## User Stories
-
 - As a user, I want to sign up, sign in.
 - As a user, I want to change password.
 - As a user, I want to sign out.
@@ -60,21 +59,7 @@ In the planning of this application, an ERD was needed to help visualize the pro
 - As a user, I want to delete my events.
 - As a user, I want to RSVP to events.
 - As a user, I want to see the number of people ‘Going’ to the event.
-- - As a user, I want to see who RSVP’d to the events.
-
-### Stretch Goals
-
 - As a user, I want to see who RSVP’d to the events.
-- As a user, I want to like/heart other events.
-- As a user, I want to share an event.
-- Allow users to send out messages to all RSVP'd users.
-- Allow users to invite other users to events
-- Allow users to upload an image when creating an event
-- Allow users to search for events based on location/ dates
-- Allow users to see who has rsvp’d to an event
-- Allow users to create a public or private event
-- Allow users to add comments to events
-- Allow users to send a message to the event host (owner)
 
 ## Unsolved Problems for Future Iterations
 * Date will be based off user timezone instead of UTC
